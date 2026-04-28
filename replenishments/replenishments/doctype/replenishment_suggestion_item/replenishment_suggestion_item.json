@@ -1,0 +1,85 @@
+{
+ "actions": [],
+ "creation": "2026-04-28 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item",
+  "default_supplier",
+  "current_stock",
+  "avg_daily_usage",
+  "lead_time_days",
+  "reorder_point",
+  "open_po_qty",
+  "suggested_qty"
+ ],
+ "fields": [
+  {
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "default_supplier",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Default Supplier",
+   "options": "Supplier",
+   "read_only": 1
+  },
+  {
+   "fieldname": "current_stock",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Current Stock",
+   "read_only": 1
+  },
+  {
+   "fieldname": "avg_daily_usage",
+   "fieldtype": "Float",
+   "label": "Avg Daily Usage",
+   "read_only": 1
+  },
+  {
+   "fieldname": "lead_time_days",
+   "fieldtype": "Int",
+   "label": "Lead Time (days)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "reorder_point",
+   "fieldtype": "Float",
+   "label": "Reorder Point",
+   "read_only": 1
+  },
+  {
+   "fieldname": "open_po_qty",
+   "fieldtype": "Float",
+   "label": "Open PO Qty",
+   "read_only": 1
+  },
+  {
+   "fieldname": "suggested_qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Suggested Qty",
+   "read_only": 1
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2026-04-28 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Replenishments",
+ "name": "Replenishment Suggestion Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

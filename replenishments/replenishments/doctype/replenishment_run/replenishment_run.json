@@ -1,0 +1,156 @@
+{
+ "actions": [],
+ "autoname": "format:REPL-RUN-{YYYY}-{#####}",
+ "creation": "2026-04-28 00:00:00",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "run_date",
+  "warehouse",
+  "column_break_1",
+  "lookback_days",
+  "safety_stock_days",
+  "status",
+  "section_break_suggestions",
+  "suggestions",
+  "section_break_skipped",
+  "skipped_items",
+  "section_break_notes",
+  "notes",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "default": "Today",
+   "fieldname": "run_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Run Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "warehouse",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Warehouse",
+   "options": "Warehouse",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "90",
+   "fieldname": "lookback_days",
+   "fieldtype": "Int",
+   "label": "Lookback Days",
+   "reqd": 1
+  },
+  {
+   "default": "14",
+   "fieldname": "safety_stock_days",
+   "fieldtype": "Int",
+   "label": "Safety Stock Days",
+   "reqd": 1
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "no_copy": 1,
+   "options": "Draft\nCalculated\nSubmitted",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_suggestions",
+   "fieldtype": "Section Break",
+   "label": "Suggestions"
+  },
+  {
+   "fieldname": "suggestions",
+   "fieldtype": "Table",
+   "label": "Suggestions",
+   "options": "Replenishment Suggestion Item"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_skipped",
+   "fieldtype": "Section Break",
+   "label": "Skipped Items"
+  },
+  {
+   "fieldname": "skipped_items",
+   "fieldtype": "Table",
+   "label": "Skipped Items",
+   "no_copy": 1,
+   "options": "Replenishment Skipped Item"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_notes",
+   "fieldtype": "Section Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Long Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Replenishment Run",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-04-28 12:46:26.786160",
+ "modified_by": "Administrator",
+ "module": "Replenishments",
+ "name": "Replenishment Run",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Stock Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
